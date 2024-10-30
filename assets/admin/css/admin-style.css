@@ -1,0 +1,345 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.wp-how-to.slide-in ::-webkit-scrollbar {
+    width: 20px;
+}
+
+.wp-how-to.slide-in ::-webkit-scrollbar-track {
+    box-shadow: inset 2px 0 #ff6666;
+}
+
+.wp-how-to.slide-in ::-webkit-scrollbar-thumb {
+    background: #ff6666;
+    border-radius: 10px;
+}
+
+.wp-how-to.slide-in {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    min-width: 25px;
+    min-height: 25px;
+    display: flex;
+}
+
+.wp-how-to.slide-in:hover {
+    opacity: 1 !important;
+}
+
+.wp-how-to.slide-in * {
+    transition: all 0.5s;
+}
+
+.wp-how-to.slide-in .options {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+}
+
+.wp-how-to.slide-in .options>div {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    z-index: 100;
+    cursor: pointer;
+    background-color: black;
+    margin-bottom: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -2px 2px 5px #ff6666;
+}
+
+.wp-how-to.slide-in .options .icon {
+    background-image: url("../img/icon-pink.png");
+}
+
+.wp-how-to.slide-in .options .icon:hover,
+.wp-how-to.slide-in.clicked .options .icon {
+    background-image: url("../img/icon-yellow.png");
+}
+
+.wp-how-to.slide-in .display {
+    position: relative;
+    background-color: transparent;
+    opacity: 1;
+    width: 95%;
+    height: 100%;
+    box-shadow: -2px 2px 5px #ff6666;
+}
+
+.wp-how-to.slide-in .options .library {
+    display: none;
+    background-image: url("../img/iconmonstr-library-pink.png");
+}
+
+.wp-how-to.slide-in .options .library:hover,
+.wp-how-to.slide-in .options .library.clicked {
+    background-image: url("../img/iconmonstr-library-yellow.png");
+}
+
+.wp-how-to.slide-in .options .settings {
+    display: none;
+    background-image: url("../img/iconmonstr-settings-pink.png");
+}
+
+.wp-how-to.slide-in .options .settings:hover,
+.wp-how-to.slide-in .options .settings.clicked {
+    background-image: url("../img/iconmonstr-settings-yellow.png");
+}
+
+.wp-how-to.slide-in .library-page,
+.wp-how-to.slide-in .settings-page {
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    display: none;
+    background-color: black;
+    overflow-y: scroll;
+}
+
+.wp-how-to.slide-in .library-page .close,
+.wp-how-to.slide-in .settings-page .close {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff6666;
+    cursor: pointer;
+}
+
+.wp-how-to.slide-in .favourites,
+.wp-how-to.slide-in .history,
+.wp-how-to.slide-in .reposition,
+.wp-how-to.slide-in .resize,
+.wp-how-to.slide-in .opacity {
+    position: relative;
+}
+
+.wp-how-to.slide-in .library-page h3 {
+    color: white;
+}
+
+.wp-how-to.slide-in .library-page div,
+.wp-how-to.slide-in .settings-page div {
+    border-bottom: dashed 2px white;
+    padding: 0 0 10px 0;
+}
+
+.wp-how-to.slide-in .library-page ul {
+    list-style: disc;
+}
+
+.wp-how-to.slide-in .library-page ::marker {
+    font-size: bold;
+    color: white;
+}
+
+.wp-how-to.slide-in .library-page .search div,
+.wp-how-to.slide-in .library-page .store,
+.wp-how-to.slide-in .library-page .get,
+.wp-how-to.slide-in .library-page .info {
+    border-bottom: none;
+}
+
+.wp-how-to.slide-in .library-page p,
+.wp-how-to.slide-in .settings-page p {
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.wp-how-to.slide-in .library-page button,
+.wp-how-to.slide-in .settings-page button {
+    background-color: #ff6666;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.wp-how-to.slide-in .library-page a {
+    color: #ff6666;
+    font-size: 16px;
+}
+
+.wp-how-to.slide-in .library-page a.error-404 {
+    color: white;
+    text-decoration: none;
+}
+
+.wp-how-to.slide-in .library-page a:hover,
+.wp-how-to.slide-in .settings-page a:hover {
+    color: #FBE81C;
+}
+
+.wp-how-to.slide-in .settings-page span,
+.wp-how-to.slide-in .library-page span {
+    color: white;
+    font-weight: bold;
+}
+
+.wp-how-to.slide-in .library-page button:hover,
+.wp-how-to.slide-in .settings-page button:hover {
+    background-color: #FBE81C;
+}
+
+.wp-how-to.slide-in .library-page input {
+    margin: 10px 0;
+}
+
+.wp-how-to.slide-in .videos {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.wp-how-to.slide-in.clicked .videos,
+.wp-how-to.slide-in.clicked .library,
+.wp-how-to.slide-in.clicked .settings,
+.wp-how-to.slide-in .library-page.clicked,
+.wp-how-to.slide-in .settings-page.clicked {
+    display: block;
+}
+
+.wp-how-to.slide-in .premium-content {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none !important;
+    text-align: center;
+}
+
+.wp-how-to.slide-in .premium-content a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: #ff6666 !important;
+    margin: 0 auto;
+}
+
+.wp-how-to.slide-in .premium-content a:hover {
+    color: #FBE81C !important;
+}
+
+.wp-how-to.slide-in.clicked .display {
+    background-color: black;
+}
+
+.wp-how-to.slide-in .videos .player {
+    position: relative;
+    min-width: 300px;
+    min-height: 200px;
+    border-bottom: solid 10px #ff6666;
+}
+
+.wp-how-to.slide-in .videos .video-selection {
+    position: relative;
+    background-color: black;
+    color: white;
+    margin-top: -5px;
+    border-top: solid 0.5px #ff6666;
+    width: 300px;
+    height: 100px;
+    min-width: 300px;
+    min-height: 100px;
+}
+
+.wp-how-to.slide-in .videos #wp-how-to-player,
+.wp-how-to.slide-in .videos #wp-how-to-embed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.wp-how-to.slide-in .resizers {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    border: 3px solid #ff6666;
+    box-sizing: border-box;
+    z-index: 101;
+}
+
+.wp-how-to.slide-in .resizers .resizer {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff6666;
+    border: 3px solid black;
+    z-index: 102;
+}
+
+.wp-how-to.slide-in .resizer.top {
+    left: 50%;
+    top: -10px;
+    cursor: ns-resize;
+    transform: translate(-7px, 0px);
+}
+
+.wp-how-to.slide-in .resizer.bottom {
+    left: 50%;
+    bottom: -10px;
+    cursor: ns-resize;
+    transform: translate(-7px, 0px);
+}
+
+.wp-how-to.slide-in .resizer.left {
+    left: -10px;
+    bottom: 50%;
+    cursor: ew-resize;
+    transform: translate(0px, 5px);
+}
+
+.wp-how-to.slide-in .resizers .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wp-how-to.slide-in .resizers .overlay .buttons {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.wp-how-to.slide-in .resizers .close-resizer {
+    display: block;
+    color: black;
+    background-color: #ff6666;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
